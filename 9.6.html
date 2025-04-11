@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Contact Form</title>
+    <style>
+        fieldset {
+            width: 400px; /* Set to a minimum of 400 pixels */
+            border: 2px ridge #ff0000;
+            padding: 10px;
+            margin-bottom: 10px;
+        }
+        legend {
+            font-family: Georgia, "Times New Roman", serif;
+            font-weight: bold;
+        }
+        label {
+            font-family: Arial, sans-serif;
+            font-size: 150%; /* Increased font size */
+        }
+        input, textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+        }
+        input[type="submit"], input[type="reset"] {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        input[type="submit"]:hover, input[type="reset"]:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <h1>Contact Us</h1>
+    <form action="http://webdevbasics.net/scripts/demo.php" method="post">
+        <fieldset>
+            <legend>Customer Information</legend>
+            <p>
+                <label for="firstName">First Name:</label><br>
+                <input type="text" id="firstName" name="firstName" required>
+            </p>
+            <p>
+                <label for="lastName">Last Name:</label><br>
+                <input type="text" id="lastName" name="lastName" required>
+            </p>
+            <p>
+                <label for="email">E-mail:</label><br>
+                <input type="email" id="email" name="email" required>
+            </p>
+        </fieldset>
+        <p>
+            <label for="comments">Comments:</label><br>
+            <textarea id="comments" name="comments" rows="4" cols="40" required></textarea>
+        </p>
+        <p>
+            <input type="submit" value="Contact">
+            <input type="reset" value="Reset">
+        </p>
+    </form>
+</body>
+</html>
